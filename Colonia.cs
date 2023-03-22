@@ -16,7 +16,6 @@ namespace CallesCasas
         public static void CrearVecindario(PictureBox pictureBox1, int ancho, int separacion)
         {
  
-
             CrearCasa(pictureBox1, ancho, x, y);
             x += ancho + separacion;
      
@@ -31,18 +30,9 @@ namespace CallesCasas
             papel.DrawLine(lapiz, x, y - 2* ancho, x+ancho, y - ancho);
         }
 
-
-
-
-
-
-
-
-
-
-
         public static void CrearCalle(PictureBox pictureBox1)
         {
+
             papel = pictureBox1.CreateGraphics();
             Pen lapiz = new Pen(Color.Black);
             papel.DrawLine(lapiz, 10, 390, 590, 390);
