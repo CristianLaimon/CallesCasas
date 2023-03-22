@@ -11,9 +11,9 @@ namespace CallesCasas
     internal class Colonia
     {
         private static Graphics papel;
-        private static int x = 10, y = 380; //el punto inicial de la primera casa ya estara definido por defecto 
+        private static float x = 10, y = 380; //el punto inicial de la primera casa ya estara definido por defecto 
 
-        public static void CrearVecindario(PictureBox pictureBox1, int ancho, int separacion)
+        public static void CrearVecindario(PictureBox pictureBox1, float ancho, float separacion)
         {
             x = 10; 
             y = 380;
@@ -23,15 +23,17 @@ namespace CallesCasas
             Pen lapiz = new Pen(Color.Black);
             papel.DrawLine(lapiz, 10, 390, 590, 390);
 
-            int numeroCasas = (pictureBox1.Width-10) / (ancho + separacion);
 
-            for (int i = 0; i < numeroCasas; i++)
+            while( x < pictureBox1.Width-25)
             {
                 CrearCasa(pictureBox1, ancho, x, y);
                 x += ancho + separacion;
+                ancho -= (float)(ancho * 0.2);
             }
+
+ 
         }
-        public static void CrearCasa(PictureBox pictureBox1, int ancho, int a, int b)
+        public static void CrearCasa(PictureBox pictureBox1, float ancho, float a, float b)
         {
             papel = pictureBox1.CreateGraphics();
             Pen lapiz = new Pen(Color.Purple);

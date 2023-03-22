@@ -9,8 +9,9 @@ namespace CallesCasas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int anchoInput = (int)numericUpDown1.Value;
-            int separacion = (int)numericUpDown2.Value; 
+            float anchoInput = (float)numericUpDown1.Value;
+            float separacion = (float)numericUpDown2.Value; 
+
 
             Colonia.CrearVecindario(pictureBox1, anchoInput, separacion);
         }
