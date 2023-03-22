@@ -12,8 +12,6 @@ namespace CallesCasas
             int anchoInput = (int)numericUpDown1.Value;
             int separacion = (int)numericUpDown2.Value; 
 
-            Colonia.CrearCalle(pictureBox1);
-
             Colonia.CrearVecindario(pictureBox1, anchoInput, separacion);
         }
 
