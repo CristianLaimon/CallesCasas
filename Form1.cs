@@ -9,8 +9,14 @@ namespace CallesCasas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Colonia.CrearCasa(pictureBox1, 10, 10);
+            int anchoInput = (int)numericUpDown1.Value;
+            int separacion = (int)numericUpDown2.Value; 
+
+            Colonia.ReiniciarCanva(pictureBox1);
             Colonia.CrearCalle(pictureBox1);
+
+            Colonia.CrearVecindario(pictureBox1, anchoInput, separacion);
         }
+
     }
 }

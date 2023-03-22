@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,26 +10,32 @@ namespace CallesCasas
 {
     internal class Colonia
     {
-        private static Graphics papel;
-        public static void CrearCasa(PictureBox pictureBox1, int x, int y)
+        private static Graphics papel; 
+        private static int x = 10, y = 380; //el punto inicial de la primera casa ya estara definido por defecto 
+
+        public static void CrearVecindario(PictureBox pictureBox1, int ancho, int separacion)
         {
-            Graphics papel;
+            CrearCasa(pictureBox1, ancho);
+        }
+        public static void CrearCasa(PictureBox pictureBox1, int ancho)
+        {
             papel = pictureBox1.CreateGraphics();
             Pen lapiz = new Pen(Color.Purple);
 
-
-       //papel.DrawRectangle(lapiz, 250, 150, 50, 50);
-            //papel.DrawLine(lapiz, 250, 150, 250, 100);
-            //papel.DrawLine(lapiz, 250, 100, 300, 150);
-
-            //papel.DrawRectangle(lapiz, x, y, 50, 50);
-            //papel.DrawLine(lapiz, x, y, 250, 100);
-            //papel.DrawLine(lapiz, x, y-50, 300, 150);
-
-            //papel.DrawRectangle(lapiz, 250, 40, 80, 20);
-            //papel.DrawLine(lapiz, 250, 40, 250, 20);
-            //papel.DrawLine(lapiz, 250, 20, 330, 40);
+            papel.DrawRectangle(lapiz, x, y - ancho, ancho, ancho);
+            papel.DrawLine(lapiz, x, y - ancho, x, y - 2* ancho);
+            papel.DrawLine(lapiz, x, y - 2* ancho, x+ancho, y - ancho);
         }
+
+
+
+
+
+
+
+
+
+
 
         public static void CrearCalle(PictureBox pictureBox1)
         {
@@ -36,5 +43,11 @@ namespace CallesCasas
             Pen lapiz = new Pen(Color.Black);
             papel.DrawLine(lapiz, 10, 390, 590, 390);
         }
+
+        public static void ReiniciarCanva(PictureBox pictureBox1)
+        {
+            pictureBox1.CreateGraphics().Clear(Color.White);
+        }
+
     }
 }

@@ -41,6 +41,7 @@
             // 
             // button1
             // 
+            this.button1.AccessibleName = "botonnn";
             this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(670, 57);
@@ -60,14 +61,14 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(495, 95);
+            this.numericUpDown1.Location = new System.Drawing.Point(161, 95);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(150, 27);
             this.numericUpDown1.TabIndex = 2;
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(147, 95);
+            this.numericUpDown2.Location = new System.Drawing.Point(486, 95);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(150, 27);
             this.numericUpDown2.TabIndex = 3;
@@ -77,9 +78,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(45, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 20);
+            this.label1.Size = new System.Drawing.Size(110, 20);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Alto de Casa:";
+            this.label1.Text = "Ancho de Casa:";
             // 
             // label2
             // 
@@ -94,7 +95,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(694, 599);
+            this.ClientSize = new System.Drawing.Size(698, 629);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numericUpDown2);
@@ -112,12 +113,11 @@
         }
 
         #endregion
-
-        private Button button1;
         private PictureBox pictureBox1;
         private NumericUpDown numericUpDown1;
         private NumericUpDown numericUpDown2;
         private Label label1;
         private Label label2;
+        public Button button1;
     }
 }
