@@ -6,5 +6,11 @@ namespace CallesCasas
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Colonia.CrearCasa(pictureBox1, 10, 10);
+            Colonia.CrearCalle(pictureBox1);
+        }
     }
 }

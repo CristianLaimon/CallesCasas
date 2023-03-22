@@ -45,11 +45,13 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(670, 57);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Dibujar Casa";
+            this.button1.Text = "Dibujar Vecindario";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(45, 162);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(600, 400);
