@@ -24,7 +24,7 @@ namespace CallesCasas
             papel.DrawLine(lapiz, 10, 390, 590, 390);
 
 
-            while( x < pictureBox1.Width-25)
+            while( (x+ancho) < pictureBox1.Width-10)
             {
                 CrearCasa(pictureBox1, ancho, x, y);
                 x += ancho + separacion;
