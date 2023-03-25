@@ -12,6 +12,7 @@ namespace CallesCasas
     {
         private static Graphics papel;
         private static float x = 10, y = 380; //el punto inicial de la primera casa ya estara definido por defecto 
+        private static Random random = new Random();
 
         public static void CrearVecindario(PictureBox pictureBox1, float ancho, float separacion)
         {
@@ -35,8 +36,10 @@ namespace CallesCasas
         }
         public static void CrearCasa(PictureBox pictureBox1, float ancho, float a, float b)
         {
+            Color randomColor = Color.FromArgb(random.Next(0, 256), random.Next(0, 256), random.Next(0, 256));
+
             papel = pictureBox1.CreateGraphics();
-            Pen lapiz = new Pen(Color.Purple);
+            Pen lapiz = new Pen(randomColor);
 
             papel.DrawRectangle(lapiz, x, y - ancho, ancho, ancho);
             papel.DrawLine(lapiz, x, y - ancho, x, y - 2 * ancho);
